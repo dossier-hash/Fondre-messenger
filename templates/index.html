@@ -1,0 +1,53 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<style>
+		.about {
+			text-align: right;
+		}
+		p.about {
+			color: gray;
+			font-family: Helvetica;
+		}
+		.button {
+		    background-color: #777;
+		    border: none;
+		    color: white;
+		    width: 10%;
+		    padding: 10px;
+		    text-align: center;
+		    text-decoration: none;
+		    display: inline-block;
+		    font-size: 21px;
+		    margin: 4px 2px;
+		    cursor: pointer;
+		    border-radius: 8px;
+		}
+
+
+
+	</style>
+	<h2>Chat with user all around!~</h2>
+	<p>A simple way to text others without having to sell your soul to fucking Facebook</p>
+	<a href='/login' class='login'><button class='button'>Log In</button></a>
+
+	<div class='about'>
+		<h2>Made for the general public as a test</h2>
+		<p>
+			I've made this messaging website to practice my Flask skills.<br>
+			Flask is a python library used for developing websites, such as this one.<br>
+			The repository for this project is on github: 
+			<a href='https://github.com/dossier-hash/fondre-messaging'> here</a>
+		</p><hr>
+	</div>
+	<div>
+		<h2>Who Am I?</h2>
+		<p>
+			My name is {{creator}}(aka. dossier-hash).<br>
+			I'm a developer from Pakistan who mainly works in Python.<br>
+			I've been programming for some time and like to post my projects on my 
+			<a href='https://github.com/dossier-hash'>github</a>
+		</p>
+	</div>
+	<!--<img src='static/mountain_view.png' style="width: 100%; height: 50%;" />-->
+{% endblock %}
