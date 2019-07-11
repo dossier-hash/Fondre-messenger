@@ -82,7 +82,7 @@
 		}
 	</style>
 	
-	<form action="/messenger" novalidate>
+	<!--<form action="/login" method='POST'>
 		{{ form.hidden_tag() }}
 		<div class="login">
 			<div class="login-screen">
@@ -102,5 +102,27 @@
 				</div>
 			</div>
 		}
-	</form>
+	</form>-->
+    <form action="" method="post" novalidate>
+        {{ form.hidden_tag() }}
+        <div class='login'>
+        	<div class='login-screen'>
+        		<div class='app-title'>
+        			<h1>Sign In</h1>
+        			<p>Connect with people all around</p>
+        		</div>
+        		<div class='login-form'>
+        		<div class='control-group'>
+	        		<p placeholder='username'>
+	            		{{ form.username(size=32) }}
+	        		</p>
+	        		<p placeholder='password'>
+	            		{{ form.password(size=32) }}
+	        		</p>
+	        		<p>{{ form.submit() }}</p>
+	        	</div>
+	        </div>
+	    </div>
+    </form>
+
 {% endblock %}
